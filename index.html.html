@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Sana AI Receptionist</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F7F9FB;
+      --surface: #FFFFFF;
+      --border: #E4EAF0;
+      --text-primary: #0F1C2E;
+      --text-secondary: #4A5E72;
+      --accent: #1A6EFF;
+      --accent-light: #EBF1FF;
+      --tag-bg: #E8F4F0;
+      --tag-text: #1A7A5E;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* Header */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg { width: 22px; height: 22px; fill: white; }
+
+    .brand-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .brand-tag {
+      margin-left: auto;
+      font-size: 11px;
+      font-weight: 500;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 760px;
+      margin: 56px auto 0;
+      padding: 0 24px;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 5vw, 44px);
+      line-height: 1.15;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+      margin-bottom: 18px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* Content */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .section {
+      margin-top: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--text-primary);
+      letter-spacing: -0.2px;
+    }
+
+    .section p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 520px) { .data-grid { grid-template-columns: 1fr; } }
+
+    .data-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .data-card-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .data-card-value {
+      font-size: 14px;
+      color: var(--text-primary);
+      font-weight: 400;
+    }
+
+    ul.policy-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    ul.policy-list li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    ul.policy-list li:last-child { border-bottom: none; }
+
+    ul.policy-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin-top: 48px;
+    }
+
+    /* Footer */
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .footer-badge {
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+      </svg>
+    </div>
+    <span class="brand-name">Sana</span>
+    <span class="brand-tag">Medical AI Receptionist</span>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-label">Legal</p>
+  <h1>Privacy Policy</h1>
+  <div class="hero-meta">
+    <span>📅 Last updated: June 2025</span>
+    <span>🌍 Applies to all Sana users</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- Introduction -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h2>Introduction</h2>
+    </div>
+    <p>Sana is an AI-powered virtual receptionist designed for dental and medical clinics. Sana communicates with patients via WhatsApp to assist with appointment booking, reminders, and general clinic inquiries.</p>
+    <p>This Privacy Policy explains what personal data Sana collects, how it is used, and what rights you have regarding your information. By interacting with Sana through WhatsApp or any other channel, you agree to the practices described here.</p>
+  </div>
+
+  <!-- Data We Collect -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      </div>
+      <h2>Data We Collect</h2>
+    </div>
+    <p>When you interact with Sana, the following information may be collected:</p>
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-card-label">Identity</div>
+        <div class="data-card-value">Your name as provided during conversation</div>
+      </div>
+      <div class="data-card">
+        <div class="data-card-label">Contact</div>
+        <div class="data-card-value">WhatsApp phone number used to message Sana</div>
+      </div>
+      <div class="data-card">
+        <div class="data-card-label">Appointment Data</div>
+        <div class="data-card-value">Requested dates, times, and type of visit</div>
+      </div>
+      <div class="data-card">
+        <div class="data-card-label">Messages</div>
+        <div class="data-card-value">Content of your conversations with Sana</div>
+      </div>
+      <div class="data-card">
+        <div class="data-card-label">Clinic Association</div>
+        <div class="data-card-value">Which clinic you are booking with</div>
+      </div>
+      <div class="data-card">
+        <div class="data-card-label">Metadata</div>
+        <div class="data-card-value">Message timestamps and delivery status</div>
+      </div>
+    </div>
+    <div class="highlight-box">
+      ⚕️ Sana does not collect medical diagnoses, prescriptions, or clinical health records. All health-related discussions remain between you and your doctor.
+    </div>
+  </div>
+
+  <!-- How We Use Your Data -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <h2>How We Use Your Data</h2>
+    </div>
+    <p>Your data is used exclusively to deliver Sana's receptionist services:</p>
+    <ul class="policy-list">
+      <li>Booking, confirming, and managing appointments on your behalf</li>
+      <li>Sending appointment reminders and follow-up messages via WhatsApp</li>
+      <li>Answering questions about clinic services, availability, and location</li>
+      <li>Improving the accuracy and performance of Sana's responses</li>
+      <li>Complying with legal obligations if required by law</li>
+    </ul>
+    <p style="margin-top: 16px;">We do <strong>not</strong> use your data for advertising, profiling, or sell it to any third party.</p>
+  </div>
+
+  <!-- Third Parties -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h2>Third-Party Services</h2>
+    </div>
+    <p>Sana operates using the following trusted third-party platforms to function:</p>
+    <ul class="policy-list">
+      <li><strong>Meta (WhatsApp Business API)</strong> — the messaging channel through which Sana operates. Meta's own Privacy Policy applies to message delivery.</li>
+      <li><strong>Google Calendar / Google Sheets</strong> — used to store and manage appointment data securely.</li>
+      <li><strong>n8n (Automation Platform)</strong> — the backend automation engine that processes your messages and triggers booking workflows.</li>
+      <li><strong>OpenAI / AI Language Model</strong> — used to understand and generate natural language responses. No personal data is stored by the AI provider beyond the session.</li>
+    </ul>
+    <p style="margin-top: 14px;">Each of these providers operates under their own privacy standards and data protection agreements.</p>
+  </div>
+
+  <!-- Data Retention -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h2>Data Retention</h2>
+    </div>
+    <p>Appointment and contact data is retained for as long as necessary to provide the service to your clinic, or as required by applicable healthcare regulations in your country.</p>
+    <p>You may request deletion of your data at any time by contacting the clinic directly or reaching out via the contact information below.</p>
+  </div>
+
+  <!-- Your Rights -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h2>Your Rights</h2>
+    </div>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul class="policy-list">
+      <li><strong>Access</strong> — request a copy of the data we hold about you</li>
+      <li><strong>Correction</strong> — ask us to correct inaccurate information</li>
+      <li><strong>Deletion</strong> — request that your data be erased ("right to be forgotten")</li>
+      <li><strong>Objection</strong> — object to how your data is being processed</li>
+      <li><strong>Portability</strong> — receive your data in a structured, machine-readable format</li>
+    </ul>
+    <p style="margin-top: 14px;">To exercise any of these rights, contact us using the details in the section below.</p>
+  </div>
+
+  <!-- Security -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <h2>Data Security</h2>
+    </div>
+    <p>We take reasonable technical and organizational measures to protect your personal data from unauthorized access, loss, or misuse. All data transmitted via WhatsApp is protected by Meta's end-to-end encryption on the user side.</p>
+    <p>Access to backend systems (n8n, Google Sheets) is restricted to authorized personnel only.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <h2>Contact Us</h2>
+    </div>
+    <p>If you have any questions about this Privacy Policy or want to exercise your data rights, please contact:</p>
+    <div class="contact-card">
+      <p><strong>Sana AI Receptionist</strong></p>
+      <p>Operated on behalf of partnered dental and medical clinics.</p>
+      <p>📧 Email: <a href="mailto:contact@sana-ai.com">contact@sana-ai.com</a></p>
+      <p>For clinic-specific inquiries, please contact your clinic directly via their official WhatsApp number.</p>
+    </div>
+  </div>
+
+  <!-- Updates -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/></svg>
+      </div>
+      <h2>Policy Updates</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. When we do, the "Last updated" date at the top of this page will reflect the change. Continued use of Sana after changes are posted constitutes your acceptance of the revised policy.</p>
+  </div>
+
+  <div class="divider"></div>
+
+</div>
+
+<footer>
+  <p>© 2025 Sana AI Receptionist. All rights reserved.</p>
+  <span class="footer-badge">✅ Meta-compliant</span>
+</footer>
+
+</body>
+</html>
